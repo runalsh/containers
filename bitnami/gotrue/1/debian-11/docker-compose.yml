@@ -5,4 +5,4 @@ version: '2'
 
 services:
   gotrue:
-    image: docker.io/bitnami/gotrue:1
+    image: docker.io/bitnami/gotrue:2

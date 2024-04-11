@@ -33,7 +33,7 @@ services:
       - mariadb
       - elasticsearch
   elasticsearch:
-    image: docker.io/bitnami/elasticsearch:7
+    image: docker.io/bitnami/elasticsearch:8
     volumes:
       - 'elasticsearch_data:/bitnami/elasticsearch/data'
 volumes:

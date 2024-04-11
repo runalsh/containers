@@ -37,7 +37,7 @@ services:
     volumes:
       - 'kafka1_data:/bitnami/kafka'
   schema-registry:
-    image: docker.io/bitnami/schema-registry:7.5
+    image: docker.io/bitnami/schema-registry:7.6
     ports:
       - '8081:8081'
     depends_on:

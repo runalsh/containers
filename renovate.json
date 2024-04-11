@@ -5,12 +5,7 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest", "major"],
-      "automergeType": "branch"
-    },
-    {
-      "matchDepTypes": ["devDependencies"],
-      "automergeType": "branch"
+      "automerge": true
     }
-  ],
-  "platformAutomerge": true
+  ]
 }

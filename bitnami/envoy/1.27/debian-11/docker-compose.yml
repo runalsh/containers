@@ -4,4 +4,4 @@
 version: '2'
 services:
   envoy:
-    image: docker.io/bitnami/envoy:1.27
+    image: docker.io/bitnami/envoy:1.29

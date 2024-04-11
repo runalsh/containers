@@ -4,4 +4,4 @@
 version: '2'
 services:
   os-shell:
-    image: docker.io/bitnami/os-shell:11
+    image: docker.io/bitnami/os-shell:12

@@ -55,7 +55,7 @@ services:
       - query
   # MinIO
   minio:
-    image: docker.io/bitnami/minio:2021
+    image: docker.io/bitnami/minio:2024
     ports:
       - '9000:9000'
     healthcheck:

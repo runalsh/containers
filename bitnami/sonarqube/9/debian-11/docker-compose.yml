@@ -13,7 +13,7 @@ services:
       - POSTGRESQL_USERNAME=bn_sonarqube
       - POSTGRESQL_DATABASE=bitnami_sonarqube
   sonarqube:
-    image: docker.io/bitnami/sonarqube:9
+    image: docker.io/bitnami/sonarqube:10
     ports:
       - '80:9000'
     volumes:

@@ -27,7 +27,7 @@ jobs:
           sudo tar xf /tmp/srp-cli.tgz -C /usr/local/bin/
           srp config --srp-endpoint ${BAC_SRP_ENDPOINT}
           srp config auth --client-id=${BAC_SRP_CLIENT_ID} --client-secret=${BAC_SRP_CLIENT_SECRET}
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - uses: actions/checkout@cd7d8d697e10461458bc61a30d094dc601a8b017
         name: Checkout Repository
         with:
           # No full history required

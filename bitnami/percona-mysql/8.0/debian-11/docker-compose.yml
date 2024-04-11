@@ -5,7 +5,7 @@ version: '2.1'
 
 services:
   percona-mysql:
-    image: docker.io/bitnami/percona-mysql:8.0
+    image: docker.io/bitnami/percona-mysql:8.2
     ports:
       - '3306:3306'
     volumes:

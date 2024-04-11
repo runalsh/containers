@@ -5,7 +5,7 @@ version: '2'
 
 services:
   mongodb-sharded:
-    image: docker.io/bitnami/mongodb-sharded:5.0
+    image: docker.io/bitnami/mongodb-sharded:7.0
     environment:
       - MONGODB_ADVERTISED_HOSTNAME=mongodb-sharded
       - MONGODB_SHARDING_MODE=mongos
@@ -17,7 +17,7 @@ services:
       - "27017:27017"
 
   mongodb-shard0:
-    image: docker.io/bitnami/mongodb-sharded:5.0
+    image: docker.io/bitnami/mongodb-sharded:7.0
     environment:
       - MONGODB_ADVERTISED_HOSTNAME=mongodb-shard0
       - MONGODB_SHARDING_MODE=shardsvr
@@ -30,7 +30,7 @@ services:
       - 'shard0_data:/bitnami'
 
   mongodb-cfg:
-    image: docker.io/bitnami/mongodb-sharded:5.0
+    image: docker.io/bitnami/mongodb-sharded:7.0
     environment:
       - MONGODB_ADVERTISED_HOSTNAME=mongodb-cfg
       - MONGODB_SHARDING_MODE=configsvr

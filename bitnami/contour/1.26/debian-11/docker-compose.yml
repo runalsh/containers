@@ -5,7 +5,7 @@ version: '2'
 
 services:
   contour:
-    image: docker.io/bitnami/contour:1.26
+    image: docker.io/bitnami/contour:1.28
     volumes:
       - contour_data:/bitnami/contour
 volumes:

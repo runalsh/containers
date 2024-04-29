@@ -5,6 +5,6 @@ version: '2'
 
 services:
   fluent-bit:
-    image: docker.io/bitnami/fluent-bit:2
+    image: docker.io/bitnami/fluent-bit:3
     ports:
       - '2020:2020'

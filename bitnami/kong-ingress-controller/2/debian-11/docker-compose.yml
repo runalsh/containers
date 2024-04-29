@@ -4,4 +4,4 @@
 version: '2'
 services:
   kong-ingress-controller:
-    image: docker.io/bitnami/kong-ingress-controller:2
+    image: docker.io/bitnami/kong-ingress-controller:3

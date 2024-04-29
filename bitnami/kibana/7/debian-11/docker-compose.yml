@@ -8,7 +8,7 @@ services:
     volumes:
       - "elasticsearch_data:/bitnami/elasticsearch"
   kibana:
-    image: docker.io/bitnami/kibana:7
+    image: docker.io/bitnami/kibana:8
     ports:
       - "5601:5601"
     volumes:

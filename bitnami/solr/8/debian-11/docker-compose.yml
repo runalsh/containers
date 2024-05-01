@@ -4,7 +4,7 @@
 version: '2'
 services:
   solr:
-    image: docker.io/bitnami/solr:8
+    image: docker.io/bitnami/solr:9
     environment:
       - SOLR_ENABLE_AUTHENTICATION=yes
     ports:

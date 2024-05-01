@@ -4,4 +4,4 @@
 version: '2'
 services:
   promtail:
-    image: docker.io/bitnami/promtail:2
+    image: docker.io/bitnami/promtail:3

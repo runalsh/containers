@@ -4,7 +4,7 @@
 version: '2'
 services:
   neo4j:
-    image: docker.io/bitnami/neo4j:4
+    image: docker.io/bitnami/neo4j:5
     ports:
       - '7474:7474'
       - '7473:7473'

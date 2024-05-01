@@ -6,7 +6,7 @@ version: '2'
 services:
   node:
     tty: true # Enables debugging capabilities when attached to this container.
-    image: docker.io/bitnami/node:18
+    image: docker.io/bitnami/node:20
     # command: sh -c 'npm install && npm start'
     ports:
       - 3000:3000

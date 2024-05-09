@@ -5,4 +5,4 @@ version: '2'
 
 services:
   supabase-storage:
-    image: docker.io/bitnami/supabase-storage:0
+    image: docker.io/bitnami/supabase-storage:1

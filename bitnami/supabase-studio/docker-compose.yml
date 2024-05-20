@@ -4,6 +4,6 @@
 version: '2'
 services:
   supabase:
-    image: docker.io/bitnami/supabase-studio:0
+    image: docker.io/bitnami/supabase-studio:1
     ports:
       - '80:3000'

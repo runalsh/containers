@@ -4,7 +4,7 @@
 version: '2'
 services:
   jupyterhub:
-    image: docker.io/bitnami/jupyterhub:4
+    image: docker.io/bitnami/jupyterhub:5
     entrypoint: ["tail", "-f", "/dev/null"]
     ports:
       - 8081:8081

@@ -1,34 +1,26 @@
-name: InfraScan Audit
+name: InfraScan Security Audit
+on: [push]
 
-on:
-  push:
-  pull_request:
+permissions:
+  pull-requests: write   # enables automatic PR comments
 
 jobs:
   infrascan:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Create Reports Directory
-        run: |
-          mkdir -p infrascan-reports
-          chmod 777 infrascan-reports
+      - uses: actions/checkout@v6
 
       - name: Run InfraScan
-        run: |
-          docker run --rm \
-            -v ${{ github.workspace }}:/scan \
-            soldevelo/infrascan:latest \
-            --scanner comprehensive \
-            --format html \
-            --out /scan/infrascan-reports/report.html
-            
-      - name: Upload InfraScan Report
+        uses: soldevelo/infrascan@v1.1.0
+        with:
+          scanner: comprehensive
+          format: html
+          out: infrascan-report.html
+          fail-on: grade_f
+
+      - name: Upload HTML Report
         uses: actions/upload-artifact@v7
-        if: always() # Upload report even if the scan step fails
+        if: always()
         with:
           name: infrascan-report
-          path: infrascan-reports/report.html
-          retention-days: 14
+          path: infrascan-report.html

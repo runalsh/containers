@@ -1378,7 +1378,13 @@ find_jemalloc_lib() {
 #   mysqladmin output
 #########################
 mysql_healthcheck() {
-    local args=("-u${DB_ROOT_USER}" "-h0.0.0.0")
+    # --skip-ssl-verify-server-cert: MariaDB 13.0 verifies server certs by
+    # default, but the server uses a dynamic in-memory self-signed cert with
+    # no CA (ssl_ca is empty), so verification always fails. Unlike --skip-ssl,
+    # this flag keeps SSL active (satisfying require_secure_transport if set)
+    # while accepting the self-signed cert. Scoped here to avoid affecting
+    # other mysqladmin invocations.
+    local args=("-u${DB_ROOT_USER}" "-h0.0.0.0" "--skip-ssl-verify-server-cert")
     local root_password
 
     root_password="$(get_master_env_var_value ROOT_PASSWORD)"
